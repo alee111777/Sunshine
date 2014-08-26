@@ -6,7 +6,7 @@
         android:title="@string/action_share"
         app:showAsAction="always"
         app:actionProviderClass="android.support.v7.widget.ShareActionProvider "
-
+        android:icon="@drawable/abc_ic_menu_share_holo_dark"
 
         />
 
