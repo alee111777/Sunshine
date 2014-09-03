@@ -156,7 +156,12 @@ public class ForecastFragment extends Fragment {
         @Override
         protected void onPostExecute(String[] strings) {
             mForecastAdapter.clear();
-            mForecastAdapter.addAll(new ArrayList<String>(Arrays.asList(strings)));
+            //mForecastAdapter.addAll(new ArrayList<String>(Arrays.asList(strings)));
+            ArrayList<String> stringArrayList = new ArrayList(Arrays.asList(strings));
+            for (String str : stringArrayList) {
+                mForecastAdapter.add(str);
+            }
+
         }
 
         /* The date/time conversion code is going to be moved outside the asynctask later,
